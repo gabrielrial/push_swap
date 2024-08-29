@@ -1,0 +1,15 @@
+{
+        "files.associations": {
+                "push_util.h": "c",
+                "push_swap.h": "c",
+                "__locale": "c",
+                "__string": "c",
+                "string": "c",
+                "string_view": "c",
+                "chrono": "c",
+                "type_traits": "c",
+                "libft.h": "c",
+                "push_list.h": "c"
+        },
+        "makefile.configureOnOpen": false
+}
