@@ -6,7 +6,7 @@
 /*   By: grial <grial@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 19:10:53 by grial             #+#    #+#             */
-/*   Updated: 2024/08/30 05:55:11 by grial            ###   ########.fr       */
+/*   Updated: 2024/08/30 06:05:08 by grial            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,7 +107,7 @@ void hola(t_list_ps **stack_a)
 	while (tmp->min != 1)
 	{
 		i++;
-		tmp++;
+		tmp = tmp->next;
 	}
 	if (i >= (ps_ft_lstsize(*stack_a) / 2) + 1)
 	{
