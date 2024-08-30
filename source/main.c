@@ -6,7 +6,7 @@
 /*   By: grial <grial@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 19:10:53 by grial             #+#    #+#             */
-/*   Updated: 2024/08/30 06:05:08 by grial            ###   ########.fr       */
+/*   Updated: 2024/08/30 11:35:48 by grial            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,8 @@ void sort_big(t_list_ps **stack_a)
 		move_to_a(stack_a, &stack_b);
 	}
 	hola(stack_a);
-	// while (!check_sort(*stack_a))
+	// print_list(*stack_a);
+	//  while (!check_sort(*stack_a))
 	//	ra(stack_a);
 	free_list(stack_a);
 }

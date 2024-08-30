@@ -36,33 +36,33 @@ char *args_to_array(int argc, char **argv);
 void free_array(char ***array);
 int only_digits(char **args);
 void free_list(t_list_ps **stack);
-void	ft_free_array(char **array);
+void ft_free_array(char **array);
 // init_stack
 t_list_ps *init_stack(t_list_ps *stack_a, char **array);
 
 // ROTATE_REVERSE
-void    rra(t_list_ps **stack_a);
-void    rrb(t_list_ps **stack_b);
-void    rra_rr(t_list_ps **stack_a);
-void    rrb_rr(t_list_ps **stack_b);
-void    rrr(t_list_ps **stack_a, t_list_ps **stack_b);
+void rra(t_list_ps **stack_a);
+void rrb(t_list_ps **stack_b);
+void rra_rr(t_list_ps **stack_a);
+void rrb_rr(t_list_ps **stack_b);
+void rrr(t_list_ps **stack_a, t_list_ps **stack_b);
 
 // ROTATE
-void    ra(t_list_ps **stack_a);
-void    rb(t_list_ps **stack_b);
-void    ra_rr(t_list_ps **stack_a);
-void    rb_rr(t_list_ps **stack_b);
-void    rr(t_list_ps **node_a, t_list_ps **node_b);
+void ra(t_list_ps **stack_a);
+void rb(t_list_ps **stack_b);
+void ra_rr(t_list_ps **stack_a);
+void rb_rr(t_list_ps **stack_b);
+void rr(t_list_ps **node_a, t_list_ps **node_b);
 
 // SWAP
-void    sa(t_list_ps **stack_a);
-void    sb(t_list_ps **stack_b);
-void	sa_ss(t_list_ps **stack_a);
-void	sb_ss(t_list_ps **stack_b);
-void    ss(t_list_ps **stack_a, t_list_ps **stack_b);
+void sa(t_list_ps **stack_a);
+void sb(t_list_ps **stack_b);
+void sa_ss(t_list_ps **stack_a);
+void sb_ss(t_list_ps **stack_b);
+void ss(t_list_ps **stack_a, t_list_ps **stack_b);
 
 // PUSH
-void    pa(t_list_ps **stack_a, t_list_ps **stack_b);
-void    pb(t_list_ps **stack_b, t_list_ps **stack_a);
+void pa(t_list_ps **stack_a, t_list_ps **stack_b);
+void pb(t_list_ps **stack_b, t_list_ps **stack_a);
 
 #endif
