@@ -6,7 +6,7 @@
 /*   By: grial <grial@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 19:10:53 by grial             #+#    #+#             */
-/*   Updated: 2024/08/30 11:35:48 by grial            ###   ########.fr       */
+/*   Updated: 2024/08/30 12:00:22 by grial            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ void sort_big(t_list_ps **stack_a)
 
 	stack_b = NULL;
 	if (ps_ft_lstsize(*stack_a) == 4)
-		pa(stack_a, &stack_b);
+		pb(&stack_b, stack_a);
 	else
 		push_twice_and_sort(stack_a, &stack_b);
 	while (ps_ft_lstsize(*stack_a) > 3)

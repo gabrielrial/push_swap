@@ -4,11 +4,11 @@ void pa(t_list_ps **stack_a, t_list_ps **stack_b)
 {
 	t_list_ps *tmp;
 
-	if (*stack_a == NULL)
+	if (*stack_b == NULL)
 		return;
-	tmp = *stack_a;
-	*stack_a = tmp->next;
-	tmp->next = *stack_b;
-	*stack_b = tmp;
+	tmp = *stack_b;
+	*stack_b = tmp->next;
+	tmp->next = *stack_a;
+	*stack_a = tmp;
 	ft_printf("pa\n");
 }

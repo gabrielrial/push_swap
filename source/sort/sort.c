@@ -3,28 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   sort.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: grial <grial@student.42berlin.de>          +#+  +:+       +#+        */
+/*   By: grial <grial@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/27 15:51:20 by grial             #+#    #+#             */
-/*   Updated: 2024/08/27 15:51:21 by grial            ###   ########.fr       */
+/*   Updated: 2024/08/30 11:59:26 by grial            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/push_swap.h"
 
-void	push_twice_and_sort(t_list_ps **stack_a, t_list_ps **stack_b)
+void push_twice_and_sort(t_list_ps **stack_a, t_list_ps **stack_b)
 {
-	pa(stack_a, stack_b);
-	pa(stack_a, stack_b);
+	pb(stack_b, stack_a);
+	pb(stack_b, stack_a);
 	if ((*stack_b)->content < (*stack_b)->next->content)
 		rb(stack_b);
 }
 
-void	sort_three(t_list_ps **stack_a)
+void sort_three(t_list_ps **stack_a)
 {
-	t_list_ps	*first;
-	t_list_ps	*second;
-	t_list_ps	*third;
+	t_list_ps *first;
+	t_list_ps *second;
+	t_list_ps *third;
 
 	if (check_sort(*stack_a))
 		return;

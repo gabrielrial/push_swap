@@ -24,12 +24,8 @@ void move_to_b(t_list_ps **stack_a, t_list_ps **stack_b)
 	total_operations_for_list_a(stack_a, stack_b);
 	cheapest = find_cheapest(*stack_a);
 	target = cheapest->target;
-	// ft_printf("NODO: %i - %i - ABOVE MID: %i\nTARGET: %i - %i ABOVE MID: %i\n", cheapest->content, cheapest->to_top, cheapest->above_mid, target->content, target->to_top, target->above_mid);
 	if (cheapest->moves == 0)
-	{
-		// ft_printf("NODO: %i SE MOVIÓ\n", cheapest->content);
-		pa(stack_a, stack_b);
-	}
+		pb(stack_b, stack_a);
 	else if ((cheapest->above_mid == target->above_mid) && (cheapest->to_top == target->to_top))
 		move_both(cheapest, stack_a, stack_b);
 	else if (cheapest->to_top >= 1)
@@ -69,12 +65,9 @@ void move_to_a(t_list_ps **stack_a, t_list_ps **stack_b)
 
 	cheapest = find_cheapest(*stack_b);
 	target = cheapest->target;
-	// ft_printf("NODO: %i - %i - ABOVE MID: %i\nTARGET: %i - %i ABOVE MID: %i\n", cheapest->content, cheapest->to_top, cheapest->above_mid, target->content, target->to_top, target->above_mid);
+
 	if (cheapest->moves == 0)
-	{
-		// ft_printf("NODO: %i SE MOVIÓ\n", cheapest->content);
-		pb(stack_b, stack_a);
-	}
+		pa(stack_a, stack_b);
 	else if ((cheapest->above_mid == target->above_mid) && (cheapest->to_top >= 1 && target->to_top >= 1))
 		move_both(cheapest, stack_a, stack_b);
 	else if (cheapest->to_top >= 1)
