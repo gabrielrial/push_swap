@@ -8,7 +8,6 @@ typedef struct s_list_ps
 	int moves;
 	int above_mid;
 	int min;
-	// int max; // BENEFICIO?
 	struct s_list_ps *target;
 	struct s_list_ps *next;
 } t_list_ps;

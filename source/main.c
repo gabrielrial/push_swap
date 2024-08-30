@@ -3,19 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: grial <grial@student.42berlin.de>          +#+  +:+       +#+        */
+/*   By: grial <grial@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 19:10:53 by grial             #+#    #+#             */
-/*   Updated: 2024/08/27 16:03:56 by grial            ###   ########.fr       */
+/*   Updated: 2024/08/30 05:55:11 by grial            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-int	main(int argc, char **argv)
+void hola(t_list_ps **stack_a);
+
+int main(int argc, char **argv)
 {
-	char		**args;
-	t_list_ps	*stack_a;
+	char **args;
+	t_list_ps *stack_a;
 
 	stack_a = NULL;
 	if (argc < 2)
@@ -29,7 +31,7 @@ int	main(int argc, char **argv)
 	free(stack_a);
 }
 
-void	sort_list(t_list_ps **stack_a)
+void sort_list(t_list_ps **stack_a)
 {
 	if (ps_ft_lstsize(*stack_a) < 3)
 		sa(stack_a);
@@ -39,9 +41,9 @@ void	sort_list(t_list_ps **stack_a)
 		sort_big(stack_a);
 }
 
-void	sort_big(t_list_ps **stack_a)
+void sort_big(t_list_ps **stack_a)
 {
-	t_list_ps	*stack_b;
+	t_list_ps *stack_b;
 
 	stack_b = NULL;
 	if (ps_ft_lstsize(*stack_a) == 4)
@@ -59,15 +61,15 @@ void	sort_big(t_list_ps **stack_a)
 		total_operations_for_list_b(stack_a, &stack_b);
 		move_to_a(stack_a, &stack_b);
 	}
-	while (!check_sort(*stack_a))
-		ra(stack_a);
-	//print_list(*stack_a);
+	hola(stack_a);
+	// while (!check_sort(*stack_a))
+	//	ra(stack_a);
 	free_list(stack_a);
 }
 
-void	print_list(t_list_ps *list)
+void print_list(t_list_ps *list)
 {
-	t_list_ps	*tmp;
+	t_list_ps *tmp;
 
 	if (list == NULL)
 		ft_printf("List does not exist\n");
@@ -80,12 +82,12 @@ void	print_list(t_list_ps *list)
 	ft_printf("NULL\n");
 }
 
-void	free_list(t_list_ps **stack)
+void free_list(t_list_ps **stack)
 {
-	t_list_ps	*tmp;
+	t_list_ps *tmp;
 
 	if (!stack)
-		return ;
+		return;
 	while (*stack)
 	{
 		tmp = (*stack)->next;
@@ -93,4 +95,28 @@ void	free_list(t_list_ps **stack)
 		*stack = tmp;
 	}
 	*stack = NULL;
+}
+
+void hola(t_list_ps **stack_a)
+{
+	int i;
+	t_list_ps *tmp;
+
+	i = 0;
+	tmp = *stack_a;
+	while (tmp->min != 1)
+	{
+		i++;
+		tmp++;
+	}
+	if (i >= (ps_ft_lstsize(*stack_a) / 2) + 1)
+	{
+		while (!check_sort(*stack_a))
+			rra(stack_a);
+	}
+	else
+	{
+		while (!check_sort(*stack_a))
+			ra(stack_a);
+	}
 }
