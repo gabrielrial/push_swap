@@ -1,11 +1,23 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   target_node.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: grial <grial@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/08/31 14:22:30 by grial             #+#    #+#             */
+/*   Updated: 2024/08/31 14:27:52 by grial            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../../include/push_swap.h"
 
-void targets_for_list_a(t_list_ps **stack_a, t_list_ps **stack_b)
+void	targets_for_list_a(t_list_ps **stack_a, t_list_ps **stack_b)
 {
-	t_list_ps *tmp_a;
-	t_list_ps *tmp_b;
-	t_list_ps *target;
-	t_list_ps *tarmax;
+	t_list_ps	*tmp_a;
+	t_list_ps	*tmp_b;
+	t_list_ps	*target;
+	t_list_ps	*tarmax;
 
 	tmp_a = *stack_a;
 	while (tmp_a)
@@ -28,12 +40,12 @@ void targets_for_list_a(t_list_ps **stack_a, t_list_ps **stack_b)
 	}
 }
 
-void targets_for_list_b(t_list_ps **stack_a, t_list_ps **stack_b)
+void	targets_for_list_b(t_list_ps **stack_a, t_list_ps **stack_b)
 {
-	t_list_ps *tmp_a;
-	t_list_ps *tmp_b;
-	t_list_ps *target;
-	t_list_ps *tarmin;
+	t_list_ps	*tmp_a;
+	t_list_ps	*tmp_b;
+	t_list_ps	*target;
+	t_list_ps	*tarmin;
 
 	tmp_b = *stack_b;
 	while (tmp_b)
@@ -56,11 +68,11 @@ void targets_for_list_b(t_list_ps **stack_a, t_list_ps **stack_b)
 	}
 }
 
-void operations_to_top(t_list_ps **stack)
+void	operations_to_top(t_list_ps **stack)
 {
-	int index;
-	int to_top;
-	t_list_ps *tmp;
+	int		index;
+	int		to_top;
+	t_list_ps	*tmp;
 
 	index = 0;
 	to_top = 0;
@@ -83,9 +95,9 @@ void operations_to_top(t_list_ps **stack)
 	}
 }
 
-void total_operations_for_list_a(t_list_ps **stack_a, t_list_ps **stack_b)
+void	total_operations_for_list_a(t_list_ps **stack_a, t_list_ps **stack_b)
 {
-	t_list_ps *tmp;
+	t_list_ps	*tmp;
 
 	tmp = *stack_a;
 	targets_for_list_a(stack_a, stack_b);
@@ -102,9 +114,9 @@ void total_operations_for_list_a(t_list_ps **stack_a, t_list_ps **stack_b)
 	}
 }
 
-void total_operations_for_list_b(t_list_ps **stack_a, t_list_ps **stack_b)
+void	total_operations_for_list_b(t_list_ps **stack_a, t_list_ps **stack_b)
 {
-	t_list_ps *tmp;
+	t_list_ps	*tmp;
 
 	tmp = *stack_b;
 	targets_for_list_b(stack_a, stack_b);

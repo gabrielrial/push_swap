@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   pa.c                                               :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: grial <grial@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/08/31 14:24:21 by grial             #+#    #+#             */
+/*   Updated: 2024/08/31 14:24:21 by grial            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../../../include/push_swap.h"
 
-void pa(t_list_ps **stack_a, t_list_ps **stack_b)
+void	pa(t_list_ps **stack_a, t_list_ps **stack_b)
 {
-	t_list_ps *tmp;
+	t_list_ps	*tmp;
 
 	if (*stack_b == NULL)
 		return;

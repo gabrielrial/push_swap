@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pb.c                                               :+:      :+:    :+:   */
+/*   target_min.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: grial <grial@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/31 14:24:25 by grial             #+#    #+#             */
-/*   Updated: 2024/08/31 14:24:44 by grial            ###   ########.fr       */
+/*   Created: 2024/08/31 14:22:22 by grial             #+#    #+#             */
+/*   Updated: 2024/08/31 14:27:12 by grial            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../include/push_swap.h"
+#include "../../include/push_swap.h"
 
-void	pb(t_list_ps **stack_b, t_list_ps **stack_a)
+void	target_min(t_list_ps **stack)
 {
 	t_list_ps	*tmp;
+	t_list_ps	*min;
 
-	if (*stack_a == NULL)
-		return;
-	tmp = *stack_a;
-	*stack_a = tmp->next;
-	tmp->next = *stack_b;
-	*stack_b = tmp;
-	ft_printf("pb\n");
+	tmp = *stack;
+	min = *stack;
+	while (tmp)
+	{
+		if (tmp->content < min->content)
+			min = tmp;
+		tmp = tmp->next;
+	}
+	min->min = 1;
 }

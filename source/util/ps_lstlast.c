@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pb.c                                               :+:      :+:    :+:   */
+/*   ps_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: grial <grial@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/31 14:24:25 by grial             #+#    #+#             */
-/*   Updated: 2024/08/31 14:24:44 by grial            ###   ########.fr       */
+/*   Created: 2024/08/31 14:23:43 by grial             #+#    #+#             */
+/*   Updated: 2024/08/31 14:23:58 by grial            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../include/push_swap.h"
+#include "../../include/push_swap.h"
 
-void	pb(t_list_ps **stack_b, t_list_ps **stack_a)
+t_list_ps	*ps_lstlast(t_list_ps *lst)
 {
 	t_list_ps	*tmp;
 
-	if (*stack_a == NULL)
-		return;
-	tmp = *stack_a;
-	*stack_a = tmp->next;
-	tmp->next = *stack_b;
-	*stack_b = tmp;
-	ft_printf("pb\n");
+	if (!lst)
+		return (NULL);
+	tmp = lst;
+	while (tmp->next)
+		tmp = tmp->next;
+	return (tmp);
 }

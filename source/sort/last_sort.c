@@ -1,26 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pb.c                                               :+:      :+:    :+:   */
+/*   last_sort.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: grial <grial@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/31 14:24:25 by grial             #+#    #+#             */
-/*   Updated: 2024/08/31 14:24:44 by grial            ###   ########.fr       */
+/*   Created: 2024/08/27 15:50:11 by grial             #+#    #+#             */
+/*   Updated: 2024/08/31 14:55:14 by grial            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../include/push_swap.h"
+#include "../../include/push_swap.h"
 
-void	pb(t_list_ps **stack_b, t_list_ps **stack_a)
+void	last_sort(t_list_ps **stack_a)
 {
-	t_list_ps	*tmp;
+	int             i;
+	t_list_ps       *tmp;
 
-	if (*stack_a == NULL)
-		return;
+	i = 0;
 	tmp = *stack_a;
-	*stack_a = tmp->next;
-	tmp->next = *stack_b;
-	*stack_b = tmp;
-	ft_printf("pb\n");
+	while (tmp->min != 1)
+	{
+		i++;
+		tmp = tmp->next;
+	}
+	if (i >= (ps_ft_lstsize(*stack_a) / 2) + 1)
+	{
+		while (!check_sort(*stack_a))
+			rra(stack_a);
+	}
+	else
+	{
+		while (!check_sort(*stack_a))
+			ra(stack_a);
+	}
 }

@@ -1,26 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pb.c                                               :+:      :+:    :+:   */
+/*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: grial <grial@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/31 14:24:25 by grial             #+#    #+#             */
-/*   Updated: 2024/08/31 14:24:44 by grial            ###   ########.fr       */
+/*   Created: 2024/08/26 19:10:53 by grial             #+#    #+#             */
+/*   Updated: 2024/08/31 14:40:48 by grial            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../include/push_swap.h"
+#include "../include/push_swap.h"
 
-void	pb(t_list_ps **stack_b, t_list_ps **stack_a)
+int	main(int argc, char **argv)
 {
-	t_list_ps	*tmp;
+	char	**args;
+	t_list_ps	*stack_a;
 
-	if (*stack_a == NULL)
-		return;
-	tmp = *stack_a;
-	*stack_a = tmp->next;
-	tmp->next = *stack_b;
-	*stack_b = tmp;
-	ft_printf("pb\n");
+	stack_a = NULL;
+	if (argc < 2)
+		return (0);
+	args = init_arg(argc, argv);
+	stack_a = init_stack(stack_a, args);
+	if (reverse_sorted(stack_a) && ps_ft_lstsize(stack_a) > 3)
+		sort_reverse(&stack_a);
+	else if (!check_sort(stack_a))
+		sort_list(&stack_a);
+	free(stack_a);
 }

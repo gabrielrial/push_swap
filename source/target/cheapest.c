@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   cheapest.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: grial <grial@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/08/31 14:21:22 by grial             #+#    #+#             */
+/*   Updated: 2024/08/31 14:26:52 by grial            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../../include/push_swap.h"
 
-t_list_ps *find_cheapest(t_list_ps *stack_a)
+t_list_ps	*find_cheapest(t_list_ps *stack_a)
 {
-	t_list_ps *tmp;
-	t_list_ps *cheapest;
+	t_list_ps	*tmp;
+	t_list_ps	*cheapest;
 
 	tmp = stack_a;
 	cheapest = tmp;
@@ -16,10 +28,10 @@ t_list_ps *find_cheapest(t_list_ps *stack_a)
 	return (cheapest);
 }
 
-void move_to_b(t_list_ps **stack_a, t_list_ps **stack_b)
+void	move_to_b(t_list_ps **stack_a, t_list_ps **stack_b)
 {
-	t_list_ps *cheapest;
-	t_list_ps *target;
+	t_list_ps	*cheapest;
+	t_list_ps	*target;
 
 	total_operations_for_list_a(stack_a, stack_b);
 	cheapest = find_cheapest(*stack_a);
@@ -34,7 +46,7 @@ void move_to_b(t_list_ps **stack_a, t_list_ps **stack_b)
 		move_b(cheapest->target, stack_b);
 }
 
-void move_both(t_list_ps *node, t_list_ps **stack_a, t_list_ps **stack_b)
+void	move_both(t_list_ps *node, t_list_ps **stack_a, t_list_ps **stack_b)
 {
 	if (node->above_mid == 1)
 		rr(stack_a, stack_b);
@@ -42,7 +54,7 @@ void move_both(t_list_ps *node, t_list_ps **stack_a, t_list_ps **stack_b)
 		rrr(stack_a, stack_b);
 }
 
-void move_a(t_list_ps *node, t_list_ps **stack_a)
+void	move_a(t_list_ps *node, t_list_ps **stack_a)
 {
 	if (node->to_top >= 1 && node->above_mid == 1)
 		ra(stack_a);
@@ -50,7 +62,7 @@ void move_a(t_list_ps *node, t_list_ps **stack_a)
 		rra(stack_a);
 }
 
-void move_b(t_list_ps *node, t_list_ps **stack_b)
+void	move_b(t_list_ps *node, t_list_ps **stack_b)
 {
 	if (node->to_top >= 1 && node->above_mid == 1)
 		rb(stack_b);
@@ -58,10 +70,10 @@ void move_b(t_list_ps *node, t_list_ps **stack_b)
 		rrb(stack_b);
 }
 
-void move_to_a(t_list_ps **stack_a, t_list_ps **stack_b)
+void	move_to_a(t_list_ps **stack_a, t_list_ps **stack_b)
 {
-	t_list_ps *cheapest;
-	t_list_ps *target;
+	t_list_ps	*cheapest;
+	t_list_ps	*target;
 
 	cheapest = find_cheapest(*stack_b);
 	target = cheapest->target;

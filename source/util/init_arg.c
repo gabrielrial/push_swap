@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init_arg.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: grial <grial@student.42berlin.de>          +#+  +:+       +#+        */
+/*   By: grial <grial@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 19:40:29 by grial             #+#    #+#             */
-/*   Updated: 2024/08/27 14:01:10 by grial            ###   ########.fr       */
+/*   Updated: 2024/08/31 16:12:45 by grial            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	**init_arg(int argc, char **argv)
 	}
 	if (!only_digits(args))
 	{
-		ft_printf("Error only digits\n");
+		ft_printf("Error\n");
 		ft_free_array(args);
 		args = NULL;
 	}

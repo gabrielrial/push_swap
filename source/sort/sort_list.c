@@ -1,26 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pb.c                                               :+:      :+:    :+:   */
+/*   sort_list.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: grial <grial@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/31 14:24:25 by grial             #+#    #+#             */
-/*   Updated: 2024/08/31 14:24:44 by grial            ###   ########.fr       */
+/*   Created: 2024/08/27 15:50:11 by grial             #+#    #+#             */
+/*   Updated: 2024/08/31 14:35:32 by grial            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../include/push_swap.h"
+#include "../../include/push_swap.h"
 
-void	pb(t_list_ps **stack_b, t_list_ps **stack_a)
+void sort_list(t_list_ps **stack_a)
 {
-	t_list_ps	*tmp;
-
-	if (*stack_a == NULL)
-		return;
-	tmp = *stack_a;
-	*stack_a = tmp->next;
-	tmp->next = *stack_b;
-	*stack_b = tmp;
-	ft_printf("pb\n");
+	if (ps_ft_lstsize(*stack_a) < 3)
+		sa(stack_a);
+	else if (ps_ft_lstsize(*stack_a) == 3)
+		sort_three(stack_a);
+	else
+		sort_big(stack_a);
 }

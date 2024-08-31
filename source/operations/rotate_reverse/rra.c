@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   rra.c                                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: grial <grial@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/08/31 14:26:05 by grial             #+#    #+#             */
+/*   Updated: 2024/08/31 14:26:05 by grial            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../../../include/push_swap.h"
 
-void rra(t_list_ps **stack_a)
+void	rra(t_list_ps **stack_a)
 {
-	t_list_ps *first;
-	t_list_ps *last;
+	t_list_ps	*first;
+	t_list_ps	*last;
 
 	if (*stack_a == NULL || (*stack_a)->next == NULL)
 		return;

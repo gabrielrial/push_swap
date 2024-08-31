@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   rrb.c                                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: grial <grial@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/08/31 14:26:01 by grial             #+#    #+#             */
+/*   Updated: 2024/08/31 14:26:02 by grial            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../../../include/push_swap.h"
 
-void rrb(t_list_ps **stack_b)
+void	rrb(t_list_ps **stack_b)
 {
-	t_list_ps *first;
-	t_list_ps *last;
+	t_list_ps	*first;
+	t_list_ps	*last;
 
 	if (*stack_b == NULL || (*stack_b)->next == NULL)
 		return;
