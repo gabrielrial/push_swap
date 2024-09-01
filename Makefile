@@ -1,7 +1,7 @@
 NAME = push_swap
 
-SRCS =	source/check/check_sort.c source/check/reverse_sorted.c \
-	source/sort/last_sort.c source/sort/sort_big.c source/sort/sort_list.c source/sort/sort_reverse.c source/sort/sort_three.c source/sort/sort.c \
+SRCS =	source/check/check_sort.c \
+	source/sort/last_sort.c source/sort/sort_big.c source/sort/sort_list.c source/sort/sort_three.c source/sort/sort.c \
 	source/target/cheapest.c source/target/target_min.c source/target/target_node.c \
 	source/operations/push/pa.c source/operations/push/pb.c \
 	source/operations/rotate/ra.c source/operations/rotate/rb.c source/operations/rotate/rr.c \

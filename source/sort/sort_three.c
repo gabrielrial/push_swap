@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_three.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: grial <grial@student.42.fr>                +#+  +:+       +#+        */
+/*   By: grial <grial@student.42berlin.de>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/27 15:51:20 by grial             #+#    #+#             */
-/*   Updated: 2024/08/31 14:39:24 by grial            ###   ########.fr       */
+/*   Updated: 2024/09/01 15:38:07 by grial            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,6 @@ void	sort_three(t_list_ps **stack_a)
 	t_list_ps	*second;
 	t_list_ps	*third;
 
-	if (check_sort(*stack_a))
-		return;
-	if (reverse_sorted(*stack_a))
-	{
-		ra(stack_a);
-		sa(stack_a);
-		return;
-	}
 	first = *stack_a;
 	second = first->next;
 	third = second->next;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: grial <grial@student.42.fr>                +#+  +:+       +#+        */
+/*   By: grial <grial@student.42berlin.de>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 19:10:53 by grial             #+#    #+#             */
-/*   Updated: 2024/08/31 14:40:48 by grial            ###   ########.fr       */
+/*   Updated: 2024/09/01 15:33:02 by grial            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,7 @@ int	main(int argc, char **argv)
 		return (0);
 	args = init_arg(argc, argv);
 	stack_a = init_stack(stack_a, args);
-	if (reverse_sorted(stack_a) && ps_ft_lstsize(stack_a) > 3)
-		sort_reverse(&stack_a);
-	else if (!check_sort(stack_a))
+	if (!check_sort(stack_a))
 		sort_list(&stack_a);
 	free(stack_a);
 }
