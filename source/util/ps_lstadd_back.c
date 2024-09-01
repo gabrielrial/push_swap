@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ps_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: grial <grial@student.42.fr>                +#+  +:+       +#+        */
+/*   By: grial <grial@student.42berlin.de>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/31 14:23:40 by grial             #+#    #+#             */
-/*   Updated: 2024/08/31 14:24:05 by grial            ###   ########.fr       */
+/*   Updated: 2024/09/01 15:43:28 by grial            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@ void	ps_lstadd_back(t_list_ps **lst, t_list_ps *new)
 	t_list_ps	*tmp;
 
 	if (lst == NULL || new == NULL)
-		return;
+		return ;
 	if (*lst == NULL)
 	{
 		*lst = new;
-		return;
+		return ;
 	}
 	tmp = ps_lstlast(*lst);
 	if (!tmp)

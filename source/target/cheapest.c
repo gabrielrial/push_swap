@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cheapest.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: grial <grial@student.42.fr>                +#+  +:+       +#+        */
+/*   By: grial <grial@student.42berlin.de>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/31 14:21:22 by grial             #+#    #+#             */
-/*   Updated: 2024/08/31 14:26:52 by grial            ###   ########.fr       */
+/*   Updated: 2024/09/01 15:49:01 by grial            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,6 @@ void	move_to_a(t_list_ps **stack_a, t_list_ps **stack_b)
 
 	cheapest = find_cheapest(*stack_b);
 	target = cheapest->target;
-
 	if (cheapest->moves == 0)
 		pa(stack_a, stack_b);
 	else if ((cheapest->above_mid == target->above_mid) && (cheapest->to_top >= 1 && target->to_top >= 1))
