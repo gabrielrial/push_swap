@@ -6,7 +6,7 @@
 /*   By: grial <grial@student.42berlin.de>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/27 15:51:20 by grial             #+#    #+#             */
-/*   Updated: 2024/09/01 15:38:07 by grial            ###   ########.fr       */
+/*   Updated: 2024/09/01 16:32:46 by grial            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,8 @@ void	sort_three(t_list_ps **stack_a)
 	third = second->next;
 	if (first->content > second->content && first->content > third->content)
 		ra(stack_a);
-	else if (second->content > first->content && second->content > third->content)
+	else if (second->content > first->content && 
+		second->content > third->content)
 		rra(stack_a);
 	if (!check_sort(*stack_a))
 		sa(stack_a);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   pa.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: grial <grial@student.42.fr>                +#+  +:+       +#+        */
+/*   By: grial <grial@student.42berlin.de>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/31 14:24:21 by grial             #+#    #+#             */
-/*   Updated: 2024/08/31 14:24:21 by grial            ###   ########.fr       */
+/*   Updated: 2024/09/01 15:58:10 by grial            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	pa(t_list_ps **stack_a, t_list_ps **stack_b)
 	t_list_ps	*tmp;
 
 	if (*stack_b == NULL)
-		return;
+		return ;
 	tmp = *stack_b;
 	*stack_b = tmp->next;
 	tmp->next = *stack_a;

@@ -6,7 +6,7 @@
 /*   By: grial <grial@student.42berlin.de>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/27 15:49:01 by grial             #+#    #+#             */
-/*   Updated: 2024/08/27 15:49:02 by grial            ###   ########.fr       */
+/*   Updated: 2024/09/01 15:56:31 by grial            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 void	sb(t_list_ps **stack_b)
 {
-	t_list_ps *tmp;
+	t_list_ps	*tmp;
 
 	if (*stack_b == NULL || (*stack_b)->next == NULL)
-		return;
+		return ;
 	tmp = (*stack_b)->next;
 	(*stack_b)->next = tmp->next;
 	tmp->next = *stack_b;

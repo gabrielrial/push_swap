@@ -6,7 +6,7 @@
 /*   By: grial <grial@student.42berlin.de>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/31 14:22:30 by grial             #+#    #+#             */
-/*   Updated: 2024/09/01 15:46:29 by grial            ###   ########.fr       */
+/*   Updated: 2024/09/01 16:31:16 by grial            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@ void	targets_for_list_a(t_list_ps **stack_a, t_list_ps **stack_b)
 		tmp_b = *stack_b;
 		while (tmp_b)
 		{
-			if (tmp_a->content >= tmp_b->content && (
-		!target || tmp_b->content > target->content))
+			if (tmp_a->content >= tmp_b->content && 
+				(!target || tmp_b->content > target->content))
 				target = tmp_b;
 			if (!tarmax || tmp_b->content > tarmax->content)
 				tarmax = tmp_b;
@@ -56,8 +56,8 @@ void	targets_for_list_b(t_list_ps **stack_a, t_list_ps **stack_b)
 		tmp_a = *stack_a;
 		while (tmp_a)
 		{
-			if (tmp_a->content >= tmp_b->content && (
-			!target || tmp_a->content < target->content))
+			if (tmp_a->content >= tmp_b->content && 
+				(!target || tmp_a->content < target->content))
 				target = tmp_a;
 			if (!tarmin || tmp_a->content < tarmin->content)
 				tarmin = tmp_a;

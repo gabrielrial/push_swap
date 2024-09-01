@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   last_sort.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: grial <grial@student.42.fr>                +#+  +:+       +#+        */
+/*   By: grial <grial@student.42berlin.de>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/27 15:50:11 by grial             #+#    #+#             */
-/*   Updated: 2024/08/31 14:55:14 by grial            ###   ########.fr       */
+/*   Updated: 2024/09/01 15:55:18 by grial            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	last_sort(t_list_ps **stack_a)
 {
-	int             i;
-	t_list_ps       *tmp;
+	int			i;
+	t_list_ps	*tmp;
 
 	i = 0;
 	tmp = *stack_a;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rrr.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: grial <grial@student.42.fr>                +#+  +:+       +#+        */
+/*   By: grial <grial@student.42berlin.de>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/31 14:25:56 by grial             #+#    #+#             */
-/*   Updated: 2024/08/31 14:25:57 by grial            ###   ########.fr       */
+/*   Updated: 2024/09/01 15:57:06 by grial            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	rra_rr(t_list_ps **stack_a)
 	t_list_ps	*last;
 
 	if (*stack_a == NULL || (*stack_a)->next == NULL)
-		return;
+		return ;
 	first = *stack_a;
 	last = *stack_a;
 	while (last->next != NULL)
@@ -37,13 +37,13 @@ void	rra_rr(t_list_ps **stack_a)
 	*stack_a = last;
 }
 
-void rrb_rr(t_list_ps **stack_b)
+void	rrb_rr(t_list_ps **stack_b)
 {
-	t_list_ps *first;
-	t_list_ps *last;
+	t_list_ps	*first;
+	t_list_ps	*last;
 
 	if (*stack_b == NULL || (*stack_b)->next == NULL)
-		return;
+		return ;
 	first = *stack_b;
 	last = *stack_b;
 	while (last->next != NULL)

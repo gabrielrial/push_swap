@@ -3,21 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: grial <grial@student.42.fr>                +#+  +:+       +#+        */
+/*   By: grial <grial@student.42berlin.de>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 15:08:13 by grial             #+#    #+#             */
-/*   Updated: 2024/08/09 11:37:54 by grial            ###   ########.fr       */
+/*   Updated: 2024/09/01 16:14:32 by grial            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstclear(t_list **lst, void (*del)(void *))
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	t_list *tmp;
+	t_list	*tmp;
 
 	if (!del || !lst || !*lst)
-		return;
+		return ;
 	while (*lst)
 	{
 		tmp = (*lst)->next;

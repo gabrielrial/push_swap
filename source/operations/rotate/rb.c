@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rb.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: grial <grial@student.42.fr>                +#+  +:+       +#+        */
+/*   By: grial <grial@student.42berlin.de>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/31 14:24:57 by grial             #+#    #+#             */
-/*   Updated: 2024/08/31 14:25:32 by grial            ###   ########.fr       */
+/*   Updated: 2024/09/01 15:57:58 by grial            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	rb(t_list_ps **stack_b)
 	t_list_ps	*last;
 
 	if (*stack_b == NULL || (*stack_b)->next == NULL)
-		return;
+		return ;
 	first = *stack_b;
 	last = *stack_b;
 	while (last->next != NULL)
