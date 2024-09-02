@@ -6,23 +6,23 @@
 /*   By: grial <grial@student.42berlin.de>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/31 14:25:56 by grial             #+#    #+#             */
-/*   Updated: 2024/09/01 15:57:06 by grial            ###   ########.fr       */
+/*   Updated: 2024/09/02 15:24:23 by grial            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../../include/push_swap.h"
 
-void	rrr(t_list_ps **stack_a, t_list_ps **stack_b)
+void	rrr(t_lst **stack_a, t_lst **stack_b)
 {
 	rra_rr(stack_a);
 	rrb_rr(stack_b);
 	ft_printf("rrr\n");
 }
 
-void	rra_rr(t_list_ps **stack_a)
+void	rra_rr(t_lst **stack_a)
 {
-	t_list_ps	*first;
-	t_list_ps	*last;
+	t_lst	*first;
+	t_lst	*last;
 
 	if (*stack_a == NULL || (*stack_a)->next == NULL)
 		return ;
@@ -37,10 +37,10 @@ void	rra_rr(t_list_ps **stack_a)
 	*stack_a = last;
 }
 
-void	rrb_rr(t_list_ps **stack_b)
+void	rrb_rr(t_lst **stack_b)
 {
-	t_list_ps	*first;
-	t_list_ps	*last;
+	t_lst	*first;
+	t_lst	*last;
 
 	if (*stack_b == NULL || (*stack_b)->next == NULL)
 		return ;

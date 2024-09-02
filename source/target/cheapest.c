@@ -6,16 +6,16 @@
 /*   By: grial <grial@student.42berlin.de>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/31 14:21:22 by grial             #+#    #+#             */
-/*   Updated: 2024/09/01 15:52:34 by grial            ###   ########.fr       */
+/*   Updated: 2024/09/02 15:24:23 by grial            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/push_swap.h"
 
-t_list_ps	*target_cheapest(t_list_ps *stack_a)
+t_lst	*target_cheapest(t_lst *stack_a)
 {
-	t_list_ps	*tmp;
-	t_list_ps	*cheapest;
+	t_lst	*tmp;
+	t_lst	*cheapest;
 
 	tmp = stack_a;
 	cheapest = tmp;

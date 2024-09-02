@@ -6,43 +6,37 @@
 /*   By: grial <grial@student.42berlin.de>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 20:11:41 by grial             #+#    #+#             */
-/*   Updated: 2024/04/24 19:07:23 by grial            ###   ########.fr       */
+/*   Updated: 2024/09/02 15:17:17 by grial            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *nptr)
+int	ft_atoi(const char *n)
 {
 	int	i;
+	int	a;
 	int	num;
 	int	sig;
 
 	sig = 1;
 	num = 0;
 	i = 0;
-	while (nptr[i] == 32 || (nptr[i] >= 9 && nptr[i] <= 13))
+	a = 0;
+	while (n[i] == 32 || (n[i] >= 9 && n[i] <= 13))
 		i++;
-	if (nptr[i] == '-' || nptr[i] == '+')
+	if (n[i] == '-' || n[i] == '+')
 	{
-		if (nptr[i] == '-')
+		if (n[i] == '-')
 			sig = -1;
 		i++;
 	}
-	while (nptr[i] >= '0' && nptr[i] <= '9')
+	while (n[i + a] >= '0' && n[i + a] <= '9')
 	{
-		num = num * 10 + (nptr[i] - '0');
-		i++;
+		if ((a > 8 && n[i + a] > '7' && sig == 1) || (a > 8 & n[i + a] > '8'))
+			return (0);
+		num = num * 10 + (n[i] - '0');
+		a++;
 	}
 	return (num * sig);
 }
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-
-	char	*c = "    123456a7";
-	int	x = ft_atoi(c);
-	printf("%s", c);
-}*/

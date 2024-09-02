@@ -6,13 +6,13 @@
 /*   By: grial <grial@student.42berlin.de>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/27 15:50:11 by grial             #+#    #+#             */
-/*   Updated: 2024/09/01 15:55:52 by grial            ###   ########.fr       */
+/*   Updated: 2024/09/02 15:24:23 by grial            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/push_swap.h"
 
-void	sort_list(t_list_ps **stack_a)
+void	sort_list(t_lst **stack_a)
 {
 	if (ps_ft_lstsize(*stack_a) < 3)
 		sa(stack_a);

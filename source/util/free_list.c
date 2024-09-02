@@ -6,15 +6,15 @@
 /*   By: grial <grial@student.42berlin.de>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 19:40:29 by grial             #+#    #+#             */
-/*   Updated: 2024/09/01 15:43:51 by grial            ###   ########.fr       */
+/*   Updated: 2024/09/02 15:24:23 by grial            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/push_swap.h"
 
-void	free_list(t_list_ps **stack)
+void	free_list(t_lst **stack)
 {
-	t_list_ps	*tmp;
+	t_lst	*tmp;
 
 	if (!stack)
 		return ;

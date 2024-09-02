@@ -6,7 +6,7 @@
 /*   By: grial <grial@student.42berlin.de>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 19:10:53 by grial             #+#    #+#             */
-/*   Updated: 2024/09/01 16:25:15 by grial            ###   ########.fr       */
+/*   Updated: 2024/09/02 15:25:20 by grial            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	main(int argc, char **argv)
 {
 	char		**args;
-	t_list_ps	*stack_a;
+	t_lst		*stack_a;
 
 	stack_a = NULL;
 	if (argc < 2)

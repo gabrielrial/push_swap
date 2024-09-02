@@ -6,15 +6,15 @@
 /*   By: grial <grial@student.42berlin.de>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/31 14:24:25 by grial             #+#    #+#             */
-/*   Updated: 2024/09/01 15:58:14 by grial            ###   ########.fr       */
+/*   Updated: 2024/09/02 15:24:23 by grial            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../../include/push_swap.h"
 
-void	pb(t_list_ps **stack_b, t_list_ps **stack_a)
+void	pb(t_lst **stack_b, t_lst **stack_a)
 {
-	t_list_ps	*tmp;
+	t_lst	*tmp;
 
 	if (*stack_a == NULL)
 		return ;

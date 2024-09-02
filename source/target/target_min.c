@@ -6,16 +6,16 @@
 /*   By: grial <grial@student.42berlin.de>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/31 14:22:22 by grial             #+#    #+#             */
-/*   Updated: 2024/09/01 15:48:06 by grial            ###   ########.fr       */
+/*   Updated: 2024/09/02 15:24:23 by grial            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/push_swap.h"
 
-void	target_min(t_list_ps **stack)
+void	target_min(t_lst **stack)
 {
-	t_list_ps	*tmp;
-	t_list_ps	*min;
+	t_lst	*tmp;
+	t_lst	*min;
 
 	tmp = *stack;
 	min = *stack;

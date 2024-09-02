@@ -6,7 +6,7 @@
 /*   By: grial <grial@student.42berlin.de>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/01 16:04:43 by grial             #+#    #+#             */
-/*   Updated: 2024/09/01 16:08:39 by grial            ###   ########.fr       */
+/*   Updated: 2024/09/02 15:26:11 by grial            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,11 @@ typedef struct s_list_ps
 	int					min;
 	struct s_list_ps	*target;
 	struct s_list_ps	*next;
-}	t_list_ps;
+}	t_lst;
 
-void		ps_lstadd_back(t_list_ps **lst, t_list_ps *new);
-t_list_ps	*ps_lstnew(int content);
-t_list_ps	*ps_lstlast(t_list_ps *lst);
-int			ps_ft_lstsize(t_list_ps *lst);
+void		ps_lstadd_back(t_lst **lst, t_lst *new);
+t_lst		*ps_lstnew(int content);
+t_lst		*ps_lstlast(t_lst *lst);
+int			ps_ft_lstsize(t_lst *lst);
 
 #endif

@@ -6,15 +6,15 @@
 /*   By: grial <grial@student.42berlin.de>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/31 14:50:13 by grial             #+#    #+#             */
-/*   Updated: 2024/09/01 15:58:46 by grial            ###   ########.fr       */
+/*   Updated: 2024/09/02 15:24:23 by grial            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/push_swap.h"
 
-int	check_sort(t_list_ps *stack)
+int	check_sort(t_lst *stack)
 {
-	t_list_ps	*tmp;
+	t_lst	*tmp;
 
 	tmp = stack;
 	if (!tmp || !tmp->next)

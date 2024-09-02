@@ -6,15 +6,15 @@
 /*   By: grial <grial@student.42berlin.de>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/31 14:23:40 by grial             #+#    #+#             */
-/*   Updated: 2024/09/01 15:43:28 by grial            ###   ########.fr       */
+/*   Updated: 2024/09/02 15:24:23 by grial            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/push_swap.h"
 
-void	ps_lstadd_back(t_list_ps **lst, t_list_ps *new)
+void	ps_lstadd_back(t_lst **lst, t_lst *new)
 {
-	t_list_ps	*tmp;
+	t_lst	*tmp;
 
 	if (lst == NULL || new == NULL)
 		return ;

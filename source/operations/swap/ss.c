@@ -6,22 +6,22 @@
 /*   By: grial <grial@student.42berlin.de>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/27 15:49:36 by grial             #+#    #+#             */
-/*   Updated: 2024/09/01 15:56:16 by grial            ###   ########.fr       */
+/*   Updated: 2024/09/02 15:24:23 by grial            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../../include/push_swap.h"
 
-void	ss(t_list_ps **stack_a, t_list_ps **stack_b)
+void	ss(t_lst **stack_a, t_lst **stack_b)
 {
 	sa_ss(stack_a);
 	sb_ss(stack_b);
 	ft_printf("ss\n");
 }
 
-void	sa_ss(t_list_ps **stack_a)
+void	sa_ss(t_lst **stack_a)
 {
-	t_list_ps	*tmp;
+	t_lst	*tmp;
 
 	if (*stack_a == NULL || (*stack_a)->next == NULL)
 		return ;
@@ -31,9 +31,9 @@ void	sa_ss(t_list_ps **stack_a)
 	*stack_a = tmp;
 }
 
-void	sb_ss(t_list_ps **stack_b)
+void	sb_ss(t_lst **stack_b)
 {
-	t_list_ps	*tmp;
+	t_lst	*tmp;
 
 	if (*stack_b == NULL || (*stack_b)->next == NULL)
 		return ;

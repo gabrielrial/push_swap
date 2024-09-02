@@ -6,16 +6,16 @@
 /*   By: grial <grial@student.42berlin.de>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/01 15:52:16 by grial             #+#    #+#             */
-/*   Updated: 2024/09/01 16:32:35 by grial            ###   ########.fr       */
+/*   Updated: 2024/09/02 15:24:23 by grial            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/push_swap.h"
 
-void	move_to_b(t_list_ps **stack_a, t_list_ps **stack_b)
+void	move_to_b(t_lst **stack_a, t_lst **stack_b)
 {
-	t_list_ps	*cheapest;
-	t_list_ps	*target;
+	t_lst	*cheapest;
+	t_lst	*target;
 
 	total_operations_for_list_a(stack_a, stack_b);
 	cheapest = target_cheapest(*stack_a);
@@ -31,7 +31,7 @@ void	move_to_b(t_list_ps **stack_a, t_list_ps **stack_b)
 		move_b(cheapest->target, stack_b);
 }
 
-void	move_both(t_list_ps *node, t_list_ps **stack_a, t_list_ps **stack_b)
+void	move_both(t_lst *node, t_lst **stack_a, t_lst **stack_b)
 {
 	if (node->above_mid == 1)
 		rr(stack_a, stack_b);
@@ -39,7 +39,7 @@ void	move_both(t_list_ps *node, t_list_ps **stack_a, t_list_ps **stack_b)
 		rrr(stack_a, stack_b);
 }
 
-void	move_a(t_list_ps *node, t_list_ps **stack_a)
+void	move_a(t_lst *node, t_lst **stack_a)
 {
 	if (node->to_top >= 1 && node->above_mid == 1)
 		ra(stack_a);
@@ -47,7 +47,7 @@ void	move_a(t_list_ps *node, t_list_ps **stack_a)
 		rra(stack_a);
 }
 
-void	move_b(t_list_ps *node, t_list_ps **stack_b)
+void	move_b(t_lst *node, t_lst **stack_b)
 {
 	if (node->to_top >= 1 && node->above_mid == 1)
 		rb(stack_b);
@@ -55,10 +55,10 @@ void	move_b(t_list_ps *node, t_list_ps **stack_b)
 		rrb(stack_b);
 }
 
-void	move_to_a(t_list_ps **stack_a, t_list_ps **stack_b)
+void	move_to_a(t_lst **stack_a, t_lst **stack_b)
 {
-	t_list_ps	*cheapest;
-	t_list_ps	*target;
+	t_lst	*cheapest;
+	t_lst	*target;
 
 	cheapest = target_cheapest(*stack_b);
 	target = cheapest->target;
