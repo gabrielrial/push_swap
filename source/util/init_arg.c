@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init_arg.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: grial <grial@student.42.fr>                +#+  +:+       +#+        */
+/*   By: grial <grial@student.42berlin.de>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 19:40:29 by grial             #+#    #+#             */
-/*   Updated: 2024/09/04 02:58:25 by grial            ###   ########.fr       */
+/*   Updated: 2024/09/04 16:51:19 by grial            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,12 @@ char	**init_arg(int argc, char **argv)
 	}
 	if (args == NULL)
 	{
-		ft_printf("Error");
+		ft_printf("Error\n");
 		return (0);
 	}
 	if (!only_digits(args))
 	{
-		ft_printf("Error");
+		ft_printf("Error\n");
 		ft_free_array(args);
 		args = NULL;
 	}
@@ -53,7 +53,7 @@ char	*args_to_array(int argc, char **argv)
 	{
 		if (argv[i] == NULL)
 		{
-			ft_printf("Error");
+			ft_printf("Error\n");
 			return (NULL);
 		}
 		tmp = str;
@@ -78,20 +78,14 @@ int	only_digits(char **a)
 	while (a[i])
 	{
 		if (a[i][0] == '0' && a[i][1] > 0)
-		{
-			//ft_printf("Error\n");
-			return(0);
-		}
+			return (0);
 		j = 0;
 		if ((a[i][j] == '-' || a[i][j] == '+') && (ft_isdigit(a[i][j + 1])))
 			j++;
 		while (a[i][j])
 		{
 			if (!ft_isdigit(a[i][j]))
-			{
-				//ft_printf("Error\n");
-				return(0);
-			}
+				return (0);
 			j++;
 		}
 		i++;

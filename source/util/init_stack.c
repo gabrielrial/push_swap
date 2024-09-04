@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init_stack.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: grial <grial@student.42.fr>                +#+  +:+       +#+        */
+/*   By: grial <grial@student.42berlin.de>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 19:34:31 by grial             #+#    #+#             */
-/*   Updated: 2024/09/04 02:58:32 by grial            ###   ########.fr       */
+/*   Updated: 2024/09/04 16:52:21 by grial            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,10 @@ t_lst	*init_stack(t_lst *stack_a, char **array)
 	while (array[i])
 	{
 		new_node = ps_lstnew(ft_atoi(array[i]));
-		if (!new_node || (array[i][0] != '0' && new_node->content == 0) || !repeted(stack_a, new_node->content))
+		if (!new_node || (array[i][0] != '0' && new_node->content == 0) || 
+		!repeted(stack_a, new_node->content))
 		{
-			ft_printf("Error");
+			ft_printf("Error\n");
 			free(new_node);
 			ft_free_array(array);
 			free_list(&stack_a);
@@ -60,14 +61,14 @@ void	ft_free_array(char **array)
 
 int	repeted(t_lst *stack, int value)
 {
-	t_lst *tmp;
+	t_lst	*tmp;
 
 	tmp = stack;
-	while(tmp)
+	while (tmp)
 	{
 		if (tmp->content == value)
-			return(0);
+			return (0);
 		tmp = tmp->next;
 	}
-	return(1);
+	return (1);
 }
