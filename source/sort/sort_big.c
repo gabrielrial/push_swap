@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_big.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: grial <grial@student.42berlin.de>          +#+  +:+       +#+        */
+/*   By: grial <grial@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/27 15:50:11 by grial             #+#    #+#             */
-/*   Updated: 2024/09/02 15:24:23 by grial            ###   ########.fr       */
+/*   Updated: 2024/09/03 22:31:42 by grial            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,7 @@ void	sort_big(t_lst **stack_a)
 	else
 		push_twice_and_sort(stack_a, &stack_b);
 	while (ps_ft_lstsize(*stack_a) > 3)
-	{
-		total_operations_for_list_a(stack_a, &stack_b);
-		move_to_b(stack_a, &stack_b);
-	}
+		pb(&stack_b, stack_a);
 	sort_three(stack_a);
 	while (stack_b)
 	{
@@ -33,5 +30,4 @@ void	sort_big(t_lst **stack_a)
 		move_to_a(stack_a, &stack_b);
 	}
 	last_sort(stack_a);
-	free_list(stack_a);
 }
